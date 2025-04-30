@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-sec">
+          <div class="logo">
+            <a href="https://joinlegacywealthgroup.com/" target="_blank"
+              ><img src="Asset 4@4x.png" class="logo"
+            /></a>
+          </div>
+          <div class="iconbar" id="menu">
+            <ul class="icon-list list-unstyled mb-0">
+              <li class="icon-item">
+                <a
+                  href="https://www.youtube.com/@therealcoreywright"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="uk-icon youtube"
+                    ><svg width="20" height="20" viewBox="0 0 20 20">
+                      <path
+                        d="M15,4.1c1,0.1,2.3,0,3,0.8c0.8,0.8,0.9,2.1,0.9,3.1C19,9.2,19,10.9,19,12c-0.1,1.1,0,2.4-0.5,3.4c-0.5,1.1-1.4,1.5-2.5,1.6 c-1.2,0.1-8.6,0.1-11,0c-1.1-0.1-2.4-0.1-3.2-1c-0.7-0.8-0.7-2-0.8-3C1,11.8,1,10.1,1,8.9c0-1.1,0-2.4,0.5-3.4C2,4.5,3,4.3,4.1,4.2 C5.3,4.1,12.6,4,15,4.1z M8,7.5v6l5.5-3L8,7.5z"
+                      ></path></svg
+                  ></span>
+                </a>
+              </li>
+              <li class="icon-item">
+                <a
+                  href="https://www.instagram.com/therealcoreywright/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <span uk-icon="icon: instagram;" class="uk-icon"
+                    ><svg width="20" height="20" viewBox="0 0 20 20">
+                      <path
+                        d="M13.55,1H6.46C3.45,1,1,3.44,1,6.44v7.12c0,3,2.45,5.44,5.46,5.44h7.08c3.02,0,5.46-2.44,5.46-5.44V6.44 C19.01,3.44,16.56,1,13.55,1z M17.5,14c0,1.93-1.57,3.5-3.5,3.5H6c-1.93,0-3.5-1.57-3.5-3.5V6c0-1.93,1.57-3.5,3.5-3.5h8 c1.93,0,3.5,1.57,3.5,3.5V14z"
+                      ></path>
+                      <circle cx="14.87" cy="5.26" r="1.09"></circle>
+                      <path
+                        d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z"
+                      ></path></svg
+                  ></span>
+                </a>
+              </li>
+              <li class="icon-item">
+                <a
+                  href="https://www.facebook.com/thecwright"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <span uk-icon="icon: facebook;" class="uk-icon"
+                    ><svg width="20" height="20" viewBox="0 0 20 20">
+                      <path
+                        d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"
+                      ></path></svg
+                  ></span>
+                </a>
+              </li>
+              <li class="icon-item">
+                <a
+                  href="https://www.tiktok.com/@therealcoreywright"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <span uk-icon="icon: tiktok;" class="uk-icon"
+                    ><svg
+                      fill="#000000"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xml:space="preserve"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-5 text-center" id="pdf_content">
+      <div class="row mob-block">
+        <div class="col-md-4">
+          <div class="accordion" id="faqAccordion">
+            <!-- Acquisition Costs -->
+            <div class="accordion-item" id="house-open">
+              <h1 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  House flipping analysis
+                </button>
+              </h1>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  <ul
+                    class="nav nav-pills d-block mb-4"
+                    id="pills-tab"
+                    role="tablist"
+                  ></ul>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">#</div>
+                    <div class="form-floating relative mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="propertyAddress"
+                        placeholder="Enter amount"
+                      />
+                      <label for="propertyAddress">Property Address</label>
+                      <span class="error" id="errorPurchase"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="Enter your Property Address"
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating relative mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="purchasePrice"
+                        placeholder="Enter amount"
+                        value="200000"
+                      />
+                      <label for="purchasePrice">Property Purchase Price</label>
+                      <span class="error" id="errorPurchase"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**Property Purchase Price** is the total cost paid to acquire the property before renovations and additional expenses."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="renoCosts"
+                        placeholder="Enter amount"
+                        value="50000"
+                      />
+                      <label for="renoCosts">Renovation Costs</label>
+                      <span class="error" id="errorReno"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**Renovation Costs** are the expenses incurred to repair, upgrade, and improve the property to increase its market value."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="closingCosts"
+                        placeholder="Enter amount"
+                        value="2"
+                      />
+                      <label for="closingCosts">Closing Costs</label>
+                      <span class="error" id="errorClosingCosts"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**Closing Costs** are the expenses incurred during the purchase and sale of the property, including agent fees, title fees, and loan costs."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-3">%</div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="holdingCosts"
+                        placeholder="Enter amount"
+                        value="10000"
+                      />
+                      <label for="holdingCosts">Holding Costs</label>
+                      <span class="error" id="errorHolding"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**Holding Costs** are the ongoing expenses incurred while owning the property, including mortgage payments, property taxes, insurance, utilities, and maintenance."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="desiredProfitMargin"
+                        placeholder="Enter Interest Rate"
+                        value="20"
+                      />
+                      <label for="desiredProfitMargin"
+                        >Desired Profit Margin</label
+                      >
+                      <span class="error" id="errordesiredProfit"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Enter the desired Profit Margin"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3">%</div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="afterRepairValue"
+                        placeholder="Enter amount"
+                        value="350000"
+                      />
+                      <label for="afterRepairValue">After Repair Value</label>
+                      <span class="error" id="errorArv"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**After Repair Value (ARV)** is the estimated market value of the property after all renovations and improvements are completed."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="projectMonths"
+                        placeholder="Enter Months"
+                        value="6"
+                      />
+                      <label for="projectMonths"
+                        >Project Duration (Months)</label
+                      >
+                      <span class="error" id="errorMonths"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Projected months for the flip project"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3">#</div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="houseMonthlyRent"
+                        placeholder="Enter amount"
+                        value="0"
+                      />
+                      <label for="houseMonthlyRent ">Monthly Rent</label>
+                      <span class="error" id="errorHouseMonthlyRent "></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          id="calculateBtn"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-original-title="**Monthly Rent** is the amount you expect to charge tenants each month for renting the property."
+                          >i</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="houseinterestRate"
+                        placeholder="Enter Interest Rate"
+                        value="5"
+                      />
+                      <label for="houseinterestRate">Interest Rate</label>
+                      <span class="error" id="errorhouseinterestRate"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Interest rate on the loan"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3">%</div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">#</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="houseLoanYear"
+                        placeholder="Enter Loan Points"
+                        value="2"
+                      />
+                      <label for="houseLoanYear"> Loan Term (years):</label>
+                      <span class="error" id="errorhouseLoanYear"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="**Loan Term (Years)** is the duration over which the loan or mortgage will be repaid, typically ranging from 10 to 30 years for real estate investments."
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="loanPoints"
+                        placeholder="Enter Loan Points"
+                        value="1"
+                      />
+                      <label for="loanPoints">Loan Points</label>
+                      <span class="error" id="errorLoanPoints"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Loan points as a percentage of the loan amount"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3">%</div>
+                  </div>
+
+                  <!-- <div class="d-flex gap-2">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="gapPoints"
+                        placeholder="Enter Gap Funding Points"
+                      />
+                      <label for="gapPoints">Gap Funding Points</label>
+                      <span class="error" id="errorGapPoints"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Points paid on gap funding costs"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-3">%</div>
+                  </div> -->
+
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">%</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="gapCosts"
+                        placeholder="Enter Gap Funding Costs"
+                        value="2"
+                      />
+                      <label for="gapCosts">Gap Funding Rate (%)</label>
+                      <span class="error" id="errorGapCosts"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Total cost of gap funding"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">%</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="downPaymentPercent"
+                        placeholder="Enter Down Payment"
+                        value="20"
+                      />
+                      <label for="downPaymentPercent">Down Payment</label>
+                      <span class="error" id="errorDownPayment"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Percentage of the base amount paid upfront (choose base below)"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <!-- Down Payment Type Dropdown -->
+                    <div class="form-floating mb-3" style="min-width: 230px">
+                      <select
+                        class="form-select"
+                        id="downPaymentType"
+                        aria-label="Down payment base"
+                      >
+                        <option value="purchase" selected>
+                          Purchase Price Only
+                        </option>
+                        <option value="purchaseAndReno">
+                          Purchase + Reno (100% Financed)
+                        </option>
+                      </select>
+                      <label for="downPaymentType">Down Payment Based On</label>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Choose whether the down payment is calculated from purchase price or purchase + renovation cost"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="d-flex gap-2">
+                    <div class="mt-3">%</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="commissionPercent"
+                        placeholder="Enter Commission"
+                      />
+                      <label for="commissionPercent"
+                        >Real Estate Commission</label
+                      >
+                      <span class="error" id="errorCommission"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Commission as a percentage of the ARV"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">%</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="resaleCosts"
+                        placeholder="Enter Closing Costs"
+                        value="6"
+                      />
+                      <label for="resaleCosts"
+                        >Resale Closing Costs (% of ARV)</label
+                      >
+                      <span class="error" id="errorResaleCosts"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Fixed closing costs on resale"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="houseAnnualMaintenance"
+                        placeholder="Enter Annual Property Taxes"
+                        value="1800"
+                      />
+                      <label for="houseAnnualMaintenance"
+                        >Annual Maintenance</label
+                      >
+                      <span
+                        class="error"
+                        id="errorhouseAnnualMaintenance"
+                      ></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Annual Maintenance"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="houseAnnualUtilities"
+                        placeholder="Enter Annual Property Taxes"
+                        value="2400"
+                      />
+                      <label for="houseAnnualUtilities">Annual Utilities</label>
+                      <span class="error" id="errorhouseAnnualUtilities"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Annual Utilities"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="propertyTaxesHF"
+                        placeholder="Enter Annual Property Taxes"
+                        value="3600"
+                      />
+                      <label for="propertyTaxesHF">Annual Property Taxes</label>
+                      <span class="error" id="errorAnnualProperty"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Annual Property Taxes"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="mt-3">$</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="insurance"
+                        placeholder="Enter Annual Insurance"
+                        value="1200"
+                      />
+                      <label for="insurance">Annual Insurance</label>
+                      <span class="error" id="errorAnnualProperty"></span>
+                      <div class="absolute input-circle">
+                        <span
+                          type="button"
+                          class="btn-custom"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Annual Insurance Cost"
+                        >
+                          i
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operating Expenses -->
+            <div class="accordion-item" id="retirement-open">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Retirement planning
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="">
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">#</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="currentAge"
+                          placeholder="Enter amount"
+                          value="28"
+                        />
+                        <label for="currentAge">Current Age</label>
+                        <span class="error" id="errorCurrentAge"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Enter Your Current Age"
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">#</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="retirementAge"
+                          placeholder="Enter amount"
+                          value="65"
+                        />
+                        <label for="retirementAge">Retirement Age</label>
+                        <span class="error" id="errorRetirementAge"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Enter Your Retirement Age"
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="currentSavings"
+                          placeholder="Enter amount"
+                          value="75000"
+                        />
+                        <label for="currentSavings">Current Savings</label>
+                        <span class="error" id="errorCurrentSavings"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Current Savings** is the amount of personal funds available to invest in the property purchase, renovations, and associated costs."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="monthlyContributions"
+                          placeholder="Enter amount"
+                          value="600"
+                        />
+                        <label for="monthlyContributions"
+                          >Monthly Contributions</label
+                        >
+                        <span
+                          class="error"
+                          id="errorMonthlyContributions"
+                        ></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Monthly Contributions** are the additional funds set aside each month to cover property expenses, renovations, or unexpected costs during the flipping process."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="annualReturn"
+                          placeholder="Enter amount"
+                          value="7"
+                        />
+                        <label for="annualReturn"
+                          >Expected Annual Return
+                        </label>
+                        <span class="error" id="errorAnnualReturn"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Expected Annual Return (%)** is the projected percentage gain on the investment over a year, calculated based on profits relative to the total investment."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="realEstateAppreciation"
+                          placeholder="Enter amount"
+                          value="4"
+                        />
+                        <label for="realEstateAppreciation"
+                          >Annual Real Estate Appreciation (%)
+                        </label>
+                        <span
+                          class="error"
+                          id="errorRealEstateAppreciation"
+                        ></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Expected Annual Return (%)** is the projected percentage gain on the investment over a year, calculated based on profits relative to the total investment."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="inflationRate"
+                          placeholder="Enter amount"
+                          value="2"
+                        />
+                        <label for="inflationRate">Inflation Rate</label>
+                        <span class="error" id="errorInflationRate"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Inflation Rate (%)** is the annual percentage increase in the general price level of goods and services, which can impact the future value of investment returns and costs."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="desiredIncome"
+                          placeholder="Enter amount"
+                          value="50000"
+                        />
+                        <label for="desiredIncome"
+                          >Desired Retirement Income</label
+                        >
+                        <span class="error" id="errorDesiredIncome"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Desired Retirement Income** is the amount of annual income you aim to generate after retirement to maintain your preferred lifestyle and financial stability."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="mortgageBalance"
+                          placeholder="Enter amount"
+                          value="30000"
+                        />
+                        <label for="mortgageBalance"
+                          >Current Mortgage Balance</label
+                        >
+                        <span class="error" id="errormortgageBalance"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Current Mortgage Balance** means a Mortgage Loan for which the last scheduled payment of debt service is not more than 30 days past due (without regard to any grace period) on and as of the Determination Date."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">#</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="mortgageTerm"
+                          placeholder="Enter amount"
+                          value="20"
+                        />
+                        <label for="mortgageTerm">Mortgage Term (Years)</label>
+                        <span class="error" id="errorMortgageTerm"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Mortgage Term refers to the total length of time it takes to repay the loan, including both the principal and interest."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="mortgageInterestRate"
+                          placeholder="Enter amount"
+                          value="3.5"
+                        />
+                        <label for="mortgageInterestRate"
+                          >Mortgage Interest Rate (%)</label
+                        >
+                        <span
+                          class="error"
+                          id="errorMortgageInterestRate"
+                        ></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="A mortgage interest rate is the percentage charged on a home loan, representing the cost of borrowing money to purchase or maintain a property."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="wholeLifeInsurance"
+                          placeholder="Enter amount"
+                          value="25000"
+                        />
+                        <label for="wholeLifeInsurance"
+                          >Whole Life Insurance Value</label
+                        >
+                        <span class="error" id="errorwholeLifeInsurance"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Whole life insurance is a type of permanent life insurance that provides coverage for your entire life, as long as premiums are paid, and builds a cash value component that can be borrowed against or withdrawn."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="lifeInsuranceMonthlyContributions"
+                          placeholder="Enter amount"
+                          value="150"
+                        />
+                        <label for="lifeInsuranceMonthlyContributions"
+                          >Monthly Contributions to Life Insurance</label
+                        >
+                        <span
+                          class="error"
+                          id="errorLifeInsuranceMonthlyContributions"
+                        ></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Whole life insurance is a type of permanent life insurance that provides coverage for your entire life, as long as premiums are paid, and builds a cash value component that can be borrowed against or withdrawn."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="currentStockValue"
+                          placeholder="Enter amount"
+                          value="40000"
+                        />
+                        <label for="currentStockValue"
+                          >Current Stock Value</label
+                        >
+                        <span class="error" id="errorCurrentStockValue"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Current Stock Value** is the estimated market value of the property based on recent sales of similar homes in the area."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="currentRealEstateEquity"
+                          placeholder="Enter amount"
+                          value="120000"
+                        />
+                        <label for="currentRealEstateEquity"
+                          >Current Real Estate Equity</label
+                        >
+                        <span
+                          class="error"
+                          id="errorCurrentRealEstateEquity"
+                        ></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Current Real Estate Equity** is the property's market value minus any outstanding mortgage or loan balances."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  Rental property evaluation -->
+            <div class="accordion-item" id="rental-open">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Rental property evaluation
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="">
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="propertyPrice"
+                          placeholder="Enter amount"
+                          value="250000"
+                        />
+                        <label for="propertyPrice">Property Price</label>
+                        <span class="error" id="errorPropertyPrice"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Property Price** is the listed or negotiated cost of the property."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">%</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="downPayment"
+                          placeholder="Enter amount"
+                          value="15"
+                        />
+                        <label for="downPayment">Down Payment</label>
+                        <span class="error" id="errorDownPaymentPer"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Down Payment** is the upfront amount paid toward the property's purchase price, typically expressed as a percentage of the total cost, with the remaining balance covered by a loan or mortgage."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="loanTerm"
+                          placeholder="Enter amount"
+                          value="25"
+                        />
+                        <label for="loanTerm">Loan Term (Years)</label>
+                        <span class="error" id="errorLoanTerm"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Loan Term (Years)** is the duration over which the loan or mortgage will be repaid, typically ranging from 10 to 30 years for real estate investments."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="interestRate"
+                          placeholder="Enter amount"
+                          value="5.2"
+                        />
+                        <label for="interestRate">Interest Rate ( in % )</label>
+                        <span class="error" id="errorInterestRate"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Interest Rate (%)** is the annual percentage charged by the lender on the loan amount, determining the cost of borrowing over the loan term."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="monthlyRent"
+                          placeholder="Enter amount"
+                          value="2200"
+                        />
+                        <label for="monthlyRent">Monthly Rent</label>
+                        <span class="error" id="errorMonthlyRent"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Monthly Rent** is the amount of money a tenant pays each month to lease the property, contributing to the investor's cash flow and potential return on investment."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="vacancyRate"
+                          placeholder="Enter amount"
+                          value="7"
+                        />
+                        <label for="vacancyRate">Vacancy Rate ( in % )</label>
+                        <span class="error" id="errorVacancyRate"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Vacancy Rate (%)** is the percentage of time the property is expected to be unoccupied, impacting rental income and overall investment returns."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="closingCostsRent"
+                          placeholder="Enter amount"
+                          value="2.5"
+                        />
+                        <label for="closingCostsRent">Closing Cost</label>
+                        <span class="error" id="errorClosingCostsRent"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Vacancy Rate (%)** is the percentage of time the property is expected to be unoccupied, impacting rental income and overall investment returns."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="propertyTaxes"
+                          placeholder="Enter amount"
+                          value="3000"
+                        />
+                        <label for="propertyTaxes">
+                          Annual Property Taxes</label
+                        >
+                        <span class="error" id="errorPropertyTaxes"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Annual Property Taxes** are the yearly taxes levied by the local government on the property's assessed value, which must be paid by the owner."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="insuranceCosts"
+                          placeholder="Enter amount"
+                          value="1500"
+                        />
+                        <label for="insuranceCosts">
+                          Annual Insurance Costs</label
+                        >
+                        <span class="error" id="errorInsuranceCosts"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Annual Insurance Costs** are the yearly expenses for property insurance, covering risks like damage, theft, and liability."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="maintenanceCosts"
+                          placeholder="Enter amount"
+                          value="1200"
+                        />
+                        <label for="maintenanceCosts">
+                          Annual Maintenance Costs</label
+                        >
+                        <span class="error" id="errorMaintenanceCosts"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Annual Maintenance Costs** are the estimated yearly expenses for repairs, upkeep, and general maintenance to keep the property in good condition."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="utilities"
+                          placeholder="Enter amount"
+                          value="600"
+                        />
+                        <label for="utilities"> Annual Utilities</label>
+                        <span class="error" id="errorUtilities"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Annual Utilities** refers to the total cost or expenses incurred over a year for essential services like electricity, water, gas, and other related services, often billed on an annual basis. "
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="mt-3">$</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="renovations"
+                          placeholder="Enter amount"
+                          value="10000"
+                        />
+                        <label for="renovations">Annual Renovations</label>
+                        <span class="error" id="errorRenovations"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Annual renovations refers to the process of regularly repairing, improving, and restoring something, especially a building, on an yearly basis. "
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="managementFees"
+                          placeholder="Enter amount"
+                          value="8"
+                        />
+                        <label for="managementFees">
+                          Annual Property Management Fees
+                        </label>
+                        <span class="error" id="errorManagementFees"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Annual Property Management Fees (%)** is the percentage of rental income paid to a property management company for handling tenant relations, maintenance, and day-to-day operations."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="rentGrowth"
+                          placeholder="Enter amount"
+                          value="3.5"
+                        />
+                        <label for="rentGrowth"> Annual Rent Growth </label>
+                        <span class="error" id="errorRentGrowth"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="Annual rent growth rate, or rental growth rate, is the percentage change in rental prices over a year, showing how much rents have increased or decreased in a specific area or for a particular type of property"
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="appreciationRate"
+                          placeholder="Enter amount"
+                          value="4"
+                        />
+                        <label for="appreciationRate"
+                          >Property Appreciation Rate ( % )</label
+                        >
+                        <span class="error" id="errappreciationRate"></span>
+                        <div class="absolute input-circle">
+                          <span
+                            type="button"
+                            class="btn-custom"
+                            id="calculateBtn"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            data-bs-original-title="**Property Appreciation Rate (%)** is the percentage increase in the value of a property over a specific period of time. It reflects how much the property's worth has grown, typically due to factors like market demand, location development, or improvements made to the property."
+                            >i</span
+                          >
+                        </div>
+                      </div>
+                      <div class="mt-3">%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Annual Growth -->
+          </div>
+        </div>
+        <div class="col-md-8 mt-5">
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active position-relative"
+              id="pills-home"
+              role="tabpanel"
+            >
+              <div class="btn-flex">
+                <button id="download-pdf" class="pdfhouse download btns">
+                  <i class="fa fa-download"></i>
+                </button>
+                <button
+                  onclick="printSpecificSection(['.housecharts','.house'])"
+                  class="printhouse print-button btns"
+                >
+                  🖨️
+                </button>
+              </div>
+
+              <div
+                class="row text-center card-2 gap-2 justify-content-center house"
+                id="contentPDF"
+              >
+                <h1><span class="text-dark">Flipping </span> Analysis</h1>
+                <p class="space">
+                  Introducing the <b>Flipping Analysis Calculator</b> – a
+                  powerful tool designed to help real estate investors evaluate
+                  potential flip projects with ease. This calculator simplifies
+                  the process by estimating key financial metrics such as
+                  <b
+                    >purchase costs, renovation expenses, carrying costs,
+                    after-repair value (ARV), and projected profits</b
+                  >. Whether you're a seasoned investor or new to house
+                  flipping, this tool provides <b>data-driven insights</b> to
+                  make informed decisions, minimize risks, and maximize returns
+                  on your investment. Try it today and streamline your house
+                  flipping analysis!
+                </p>
+                <div
+                  class="row text-center mt-4 card-2 gap-3 justify-content-center"
+                >
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4 class="">Property Address:</h4>
+                      <div class="result" id="displayedAddress"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner grossProfitcard">
+                      <h4 class="grosspro">Gross Profit:</h4>
+                      <div class="result" id="grossProfit"></div>
+                    </div>
+                  </div> -->
+
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Total Investment:</h4>
+                      <div class="result" id="totalInvestment"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner netprocard">
+                      <h4 class="netprocardhead">Net Profit:</h4>
+                      <div class="result" id="netProfit"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Total Cash Invested:</h4>
+                      <div class="result" id="totalCashInvested"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner promarcard">
+                      <h4 class="promarcardhead">Profit Margin:</h4>
+                      <div class="result" id="profitMargin"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner monthlyHoldingCostCard">
+                      <h4 class="mhctext">Monthly holding costs:</h4>
+                      <div class="result" id="monthlyHoldingCost"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4 class="">Gap Cost:</h4>
+                      <div class="result" id="calculatedGapCost"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Cash-on-Cash Return:</h4>
+                      <div class="result" id="cashOnCashReturn"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Break-even Years:</h4>
+                      <div class="result" id="breakEvenYears"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Required ARV for target margin:</h4>
+                      <div class="result" id="requiredARV"></div>
+                    </div>
+                  </div> -->
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Max Purchase Price:</h4>
+                      <div class="result" id="maxPurchasePrice"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner rvfcard">
+                      <h4 class="rvfcardhead">Rental Vs Flip:</h4>
+                      <div class="result" id="rentalVsFlip"></div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4 class="">Taxes (Prorated):</h4>
+                      <div class="result" id="proratedTaxes"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4 class="mhctext">Insurance (Prorated):</h4>
+                      <div class="result" id="proratedInsurance"></div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Profit Min %:</h4>
+                      <div class="result" id="profitMinPercent"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Profit Min $:</h4>
+                      <div class="result" id="profitMinDollar"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Projection:</h4>
+                      <div class="result" id="projection"></div>
+                    </div>
+                  </div> -->
+                  <div class="col-md-5 col-sm-12">
+                    <div class="card p-3 card-2-inner dealCardd">
+                      <h4 class="dealCarddhead">Deal?</h4>
+                      <div class="result" id="dealStatus"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Retirement Form Output -->
+              <div class="btn-flex">
+                <button id="download-pdf2" class="pdfretire download btns">
+                  <i class="fa fa-download"></i>
+                </button>
+                <button
+                  onclick="printSpecificSection(['.retirecharts','.retire'])"
+                  class="printretire print-button btns"
+                >
+                  🖨️
+                </button>
+              </div>
+              <div class="row text-center mt-4 card-2 retire" id="contentPDF2">
+                <h1>
+                  <span class="text-dark">Retirement </span> Planning Calculator
+                </h1>
+                <p class="space">
+                  Introducing the <b>Retirement Planning Calculator</b> – a
+                  powerful tool designed to help you plan and secure your
+                  financial future. This calculator allows you to estimate your
+                  <b
+                    >savings growth, expected retirement income, investment
+                    returns, and future expenses</b
+                  >
+                  based on key financial inputs. Whether you're just starting or
+                  fine-tuning your retirement strategy, this tool provides
+                  <b>data-driven insights</b> to help you achieve your desired
+                  retirement lifestyle. Start planning today and take control of
+                  your financial independence!
+                </p>
+                <div
+                  class="row text-center mt-4 card-2 gap-3 justify-content-center"
+                >
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner totalSavingsCard">
+                      <h4 class="totalSavingshead">
+                        Total Savings at Retirement:
+                      </h4>
+                      <div class="result" id="totalSavings"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Annual Withdrawal Needed:</h4>
+                      <div class="result" id="annualWithdrawal"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Years Until Depletion:</h4>
+                      <div class="result" id="yearsUntilDepletion"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner short">
+                      <h4 class="shortcap">Shortfall/Surplus:</h4>
+                      <div class="result" id="shortfallSurplus"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card p-3 card-2-inner short">
+                      <h4>Net Portfolio Value:</h4>
+                      <div class="result" id="projections"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Rental Property Evaluation Calculator -->
+              <div class="btn-flex">
+                <button id="download-pdf3" class="pdfrental download btns">
+                  <i class="fa fa-download"></i>
+                </button>
+                <button
+                  onclick="printChartsAndTable('.rentalcharts','.table-responsive','.rental')"
+                  class="printrent print-button btns"
+                >
+                  🖨️
+                </button>
+              </div>
+              <div
+                class="row text-center mt-4 card-2 card-service rental"
+                id="contentPDF3"
+              >
+                <h1>
+                  <span class="text-dark">Rental </span> Property Evaluation
+                  Calculator
+                </h1>
+                <p class="space">
+                  Introducing the <b>Rental Property Evaluation Calculator</b> –
+                  a comprehensive tool designed to help real estate investors
+                  assess the profitability of rental properties. This calculator
+                  evaluates key financial metrics such as
+                  <b
+                    >purchase price, rental income, expenses, cash flow, return
+                    on investment (ROI), and cap rate</b
+                  >
+                  to provide a clear picture of a property's potential. Whether
+                  you're a new investor or an experienced landlord, this tool
+                  offers
+                  <b>data-driven insights</b> to make informed investment
+                  decisions and maximize returns. Start analyzing your rental
+                  properties today!
+                </p>
+                <div
+                  class="row text-center mt-4 card-2 gap-3 justify-content-center"
+                >
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Loan Amount:</h4>
+                      <div class="result" id="loanAmount"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Total Monthly Costs:</h4>
+                      <div class="result" id="mortgagePayment"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Net Operating Income:</h4>
+                      <div class="result" id="noi"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Cash Flow per Month:</h4>
+                      <div class="result" id="cashFlow"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Cap Rate:</h4>
+                      <div class="result" id="capRate"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Cash-on-Cash Return:</h4>
+                      <div class="result" id="cocReturn"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Total Cash Invested:</h4>
+                      <div class="result" id="cashInvestedRent"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner">
+                      <h4>Annual Cash Flow:</h4>
+                      <div class="result" id="annualCashFlow"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card p-3 card-2-inner" id="debtcard">
+                      <h4 class="dssr">Debt Service Ratio (DSR):</h4>
+                      <div class="result" id="debtServiceRatio"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container housecharts charts">
+      <div
+        class="row d-flex justify-content-lg-start justify-content-center mx-2 my-5 shadow rounded p-2 align-item-center"
+      >
+        <div class="col-lg-6 col-md-12 col-12 mb-4">
+          <canvas id="projectCostBreakdownChart"></canvas>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 mb-4">
+          <canvas id="arvDistributionChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="container retirecharts charts">
+      <div
+        class="row d-flex justify-content-lg-start justify-content-center mx-2 my-5 shadow rounded p-2 align-item-center"
+      >
+        <div class="col-lg-6 col-md-6">
+          <canvas id="assetBreakdownChart"></canvas>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <canvas id="incomeSourceChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="container rentalcharts charts">
+      <div class="d-flex gap-2">
+        <div class="form-floating mb-3 position-relative">
+          <select class="form-control drops" id="timeDuration"></select>
+          <i
+            class="bi bi-chevron-down position-absolute"
+            style="
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              pointer-events: none;
+              color: #d0b870;
+            "
+          ></i>
+        </div>
+      </div>
+      <div
+        class="row d-flex justify-content-center mx-2 my-5 shadow rounded p-2 align-item-center"
+      >
+        <div class="col-lg-6">
+          <canvas id="portfolioPieChart"></canvas>
+        </div>
+        <div class="col-lg-6">
+          <canvas id="cashFlowPieChart"></canvas>
+        </div>
+      </div>
+      <div class="table-responsive container my-4">
+        <div class="form-floating mb-3 position-relative">
+          <select
+            class="form-control drops"
+            id="years_tbl"
+            onchange="updateTableRange()"
+          ></select>
+          <i
+            class="bi bi-chevron-down position-absolute"
+            style="
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              pointer-events: none;
+              color: #d0b870;
+            "
+          ></i>
+        </div>
+        <div id="yearlyTables"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-sec row">
+          <div class="logo footer-item col-md-2">
+            <a href="https://joinlegacywealthgroup.com/" target="_blank">
+              <img src="white-gold.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="copyright footer-item col-md-10">
+            <p class="mb-0">© 2025 All rights reserved. Legacy Wealth Group</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display =
+          menu.style.display === "none" || menu.style.display === ""
+            ? "block"
+            : "none";
+      }
+    </script>
+    <script src="calculator.js"></script>
+    <!-- tooltip js start -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = document.querySelectorAll(
+          '[data-bs-toggle="tooltip"]'
+        );
+
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+          var tooltip = new bootstrap.Tooltip(tooltipTriggerEl);
+
+          tooltipTriggerEl.addEventListener("click", function () {
+            tooltip.show();
+            setTimeout(() => tooltip.hide(), 2000); // Hide after 2 seconds
+          });
+        });
+      });
+
+      document.querySelectorAll('input[type="number"]').forEach((input) => {
+        input.addEventListener("wheel", function (event) {
+          event.preventDefault();
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to show only the selected class and its corresponding button
+        function showAccordion(targetClass) {
+          const allClasses = ["house", "retire", "rental"];
+          const allButtons = ["pdfhouse", "pdfretire", "pdfrental"];
+          const allprint = ["printhouse", "printretire", "printrent"];
+
+          allClasses.forEach((cls) => {
+            document.querySelector("." + cls).style.display =
+              cls === targetClass ? "block" : "none";
+          });
+
+          allButtons.forEach((btn, index) => {
+            document.querySelector("." + btn).style.display =
+              allClasses[index] === targetClass ? "block" : "none";
+          });
+
+          allprint.forEach((btn, index) => {
+            document.querySelector("." + btn).style.display =
+              allClasses[index] === targetClass ? "block" : "none";
+          });
+        }
+
+        // Set initial state
+        showAccordion("house");
+
+        // Adding event listeners to toggle respective elements
+        document
+          .getElementById("house-open")
+          .addEventListener("click", function () {
+            showAccordion("house");
+          });
+        document
+          .getElementById("retirement-open")
+          .addEventListener("click", function () {
+            showAccordion("retire");
+          });
+        document
+          .getElementById("rental-open")
+          .addEventListener("click", function () {
+            showAccordion("rental");
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Show house chart on page load
+        showChart("housecharts");
+
+        function showChart(chartClass) {
+          // Hide all chart divs
+          document.querySelectorAll(".charts").forEach((div) => {
+            div.style.display = "none";
+          });
+
+          // Show the selected chart
+          const target = document.querySelector("." + chartClass);
+          if (target) {
+            target.style.display = "block";
+          }
+
+          // If it's the rental chart, also call updateTableRange()
+          if (
+            chartClass === "rentalcharts" &&
+            typeof updateTableRange === "function"
+          ) {
+            updateTableRange();
+          }
+        }
+
+        // Button click handlers
+        document
+          .getElementById("house-open")
+          .addEventListener("click", function () {
+            showChart("housecharts");
+          });
+
+        document
+          .getElementById("rental-open")
+          .addEventListener("click", function () {
+            showChart("rentalcharts");
+          });
+
+        document
+          .getElementById("retirement-open")
+          .addEventListener("click", function () {
+            showChart("retirecharts");
+          });
+      });
+    </script>
+    <script>
+      const select = document.getElementById("timeDuration");
+      const maxYears = 40;
+
+      for (let i = 1; i <= maxYears; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = `${i} Year${i > 1 ? "s" : ""}`;
+        if (i === 1) option.selected = true;
+        select.appendChild(option);
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
